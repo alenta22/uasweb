@@ -12,8 +12,9 @@ class Child1 extends Component {
     render() {
     return (<div>
         <h3>Child Component</h3>
-        <p>Stok Produk : {this.props.stock}</p></div>
-
+        <p>Stok Produk : {this.props.stock}</p>
+        <button>Beli</button>
+        </div>
         )
     }
 }
