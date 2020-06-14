@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Alert } from 'reactstrap';
+
 
 class BootstrapComp extends Component {
     constructor(props) {
@@ -11,7 +13,16 @@ class BootstrapComp extends Component {
 
     render() {
     return (
-        <div>Hello Bootstrap</div>
+        <div><Alert color="primary">
+        This is a primary alert — check it out!
+      </Alert>
+      <Alert color="secondary">
+        This is a secondary alert — check it out!
+      </Alert>
+      <Alert color="success">
+        This is a success alert — check it out!
+      </Alert>
+      </div>
         )
     }
 }
