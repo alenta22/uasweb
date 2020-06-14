@@ -4,6 +4,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom' ;
 import NavbarComp from './Component/Fungsional/NavbarComp';
 import HomePage from './Component/Fungsional/Homepage';
 import About from './Component/Fungsional/AboutComp'
+import DetailComp from './Component/Fungsional/DetailComp';
 //import Parent from './Component/Class/Parent';
 //import logo from './logo.svg';
 //import Home from './Component/Fungsional/Home';
@@ -14,10 +15,11 @@ const App = () => {
   return (
     <BrowserRouter>
     <NavbarComp/>
-    <switch>
+    <Switch>
       <Route exact path="/" component={HomePage} />
       <Route exact path="/about" component={About} />
-    </switch>
+      <Route exact path="/detail:id" component={DetailComp} />
+    </Switch>
     </BrowserRouter>
   );
 }
