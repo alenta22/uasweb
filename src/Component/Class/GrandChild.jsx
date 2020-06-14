@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import GrandChild from './GrandChild'
 
-class Child2 extends Component {
+class GrandChild extends Component {
     constructor(props) {
         super(props)
 
@@ -12,12 +11,12 @@ class Child2 extends Component {
 
     render() {
     return (
-    <div>
-        <h3>Child 2</h3>
-        <GrandChild data={this.props.stock}/>
-        </div>
+            <div>
+            <p>Grand Child</p>
+            <p>{this.props.data}</p>
+            </div>
         )
     }
 }
 
-export default Child2;
+export default GrandChild;

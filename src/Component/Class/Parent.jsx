@@ -25,8 +25,7 @@ class Parent extends Component {
             fungsi={this.beliProduk.bind(this)}
             ></Child1>
             <Child2
-            stock={this.state.stock}
-            />
+            stock={this.state.stock}/>
             </div>
         )
     }
