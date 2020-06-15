@@ -6,7 +6,8 @@ import CardComp from './CardComp';
 function AboutComp() {
     return (
         <div>
-      <Jumbotron>
+      <Jumbotron fluid>
+        <Container fluid>
         <h1 className="display-3">About</h1>
         <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
         <hr className="my-2" />
@@ -14,6 +15,7 @@ function AboutComp() {
         <p className="lead">
           <Button color="primary">Learn More</Button>
         </p>
+        </Container>
       </Jumbotron>
       <Container>
         <Row>
