@@ -27,6 +27,7 @@ class ListComp extends PureComponent {
         return (
             <Container>
                 <h2>Data Mahasiswa</h2>
+                <NavLink href="/mahasiswa/tambah"><button color="success">Tambah Data</button></NavLink>
                 <hr/>
                 <Table className="table-bordered">
                     <thead>
