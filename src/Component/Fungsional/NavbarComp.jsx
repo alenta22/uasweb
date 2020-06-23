@@ -29,6 +29,9 @@ const NavbarComp = (props) => {
               <NavItem>
                 <NavLink href="/mahasiswa">Mahasiswa</NavLink>
               </NavItem>
+              <NavItem>
+                <NavLink href="/kelas">Class</NavLink>
+              </NavItem>
             <NavbarText>Simple Text</NavbarText>
             </Nav>
           </Collapse>
