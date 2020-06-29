@@ -10,6 +10,7 @@ import TambahComp from './Component/Class/TambahComp';
 import EditComp from './Component/Class/EditComp';
 import KelasComp from './Component/Hooks/Class/KelasComp';
 import HooksComp from './Component/Hooks/Functional/HooksComp';
+import HooksUseEffects from './Component/Hooks/Functional/HooksUseEffects';
 //import Parent from './Component/Class/Parent';
 //import logo from './logo.svg';
 //import Home from './Component/Fungsional/Home';
@@ -28,6 +29,7 @@ const App = () => {
       <Route exact path="/mahasiswa/edit" component={EditComp} />
       <Route exact path="/kelas" component={KelasComp} />
       <Route exact path="/hooks" component={HooksComp} />
+      <Route exact path="/useEffect" component={HooksUseEffects} />
       {/*<Route exact path="/detail:id" component={DetailComp} /> */}
     </Switch>
     </BrowserRouter>
