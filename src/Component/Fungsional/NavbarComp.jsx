@@ -7,7 +7,8 @@ import {
   Nav,
   NavItem,
   NavLink,
-  NavbarText
+  NavbarText,
+  Button
 } from 'reactstrap';
 const NavbarComp = (props) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -40,6 +41,14 @@ const NavbarComp = (props) => {
               </NavItem>
             <NavbarText>Simple Text</NavbarText>
             </Nav>
+
+<NavbarText>
+  <Button color= "danger">
+    <i className="fa fa-shopping-cart"></i>
+    <span className="badge badge-light">0</span>
+  </Button>
+</NavbarText>
+
           </Collapse>
           </Navbar>
       </div>
