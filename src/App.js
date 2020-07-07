@@ -12,6 +12,7 @@ import KelasComp from './Component/Hooks/Class/KelasComp';
 import HooksComp from './Component/Hooks/Functional/HooksComp';
 import HooksUseEffects from './Component/Hooks/Functional/HooksUseEffects';
 import { CartContext } from './CartContex';
+import ProductComp from './Component/Fungsional/ProductComp';
 //import Parent from './Component/Class/Parent';
 //import logo from './logo.svg';
 //import Home from './Component/Fungsional/Home';
@@ -35,6 +36,7 @@ const[value, setValue] = useState(0)
       <Route exact path="/kelas" component={KelasComp} />
       <Route exact path="/hooks" component={HooksComp} />
       <Route exact path="/useEffect" component={HooksUseEffects} />
+      <Route exact path="/produk" component={ProductComp} />
       {/*<Route exact path="/detail:id" component={DetailComp} /> */}
     </Switch>
     </CartContext.Provider>
