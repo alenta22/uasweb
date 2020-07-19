@@ -18,6 +18,8 @@ import ProductComp from './Component/Fungsional/ProductComp';
 //import Home from './Component/Fungsional/Home';
 //import Beranda from './Component/Class/Beranda';
 //import './App.css';
+import LoginComp from'./Component/Fungsional/LoginComp';
+import DaftarComp from './Component/Fungsional/DaftarComp';
 
 const App = () => {
 
@@ -28,6 +30,8 @@ const[value, setValue] = useState(0)
     <CartContext.Provider value={{value, setValue}}>
     <NavbarComp/>
     <Switch>
+      <Route exact path="/" component={LoginComp}/>
+      <Route exact path="/daftar" component={DaftarComp}/>
       <Route exact path="/" component={HomePage} />
       <Route exact path="/about" component={About} />
       <Route exact path="/mahasiswa" component={ListComp} />

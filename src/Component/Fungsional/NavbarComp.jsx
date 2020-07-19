@@ -32,29 +32,21 @@ const NavbarComp = (props) => {
                 <NavLink to="/about"className="nav-link">About</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/mahasiswa"className="nav-link">Mahasiswa</NavLink>
+                <NavLink to="/mahasiswa"className="nav-link">Barang</NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink to="/kelas"className="nav-link">Class</NavLink>
+              {/*<NavItem>
+              <NavLink to="/kelas"className="nav-link">Class</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink to="/hooks"className="nav-link">Hook</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink to="/useEffect"className="nav-link">Use Effects</NavLink>
-              </NavItem>
+              </NavItem>*/}
               <NavItem>
                 <NavLink to="/produk" className="nav-link">Produk</NavLink>
               </NavItem>
-            <NavbarText>Simple Text</NavbarText>
             </Nav>
-
-<NavbarText>
-  <Button color= "danger">
-    <i className="fa fa-shopping-cart"></i>
-    <span className="badge badge-light">{value}</span>
-  </Button>
-</NavbarText>
 
           </Collapse>
           </Navbar>

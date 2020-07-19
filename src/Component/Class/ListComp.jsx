@@ -10,7 +10,7 @@ class ListComp extends PureComponent {
     constructor(props) {
         super (props)
         this.state = {
-            mahasiswa: [],
+            barang : [],
             response: '',
             display: 'none'
         }
@@ -19,15 +19,15 @@ class ListComp extends PureComponent {
     componentDidMount(){
         axios.get(api+'/tampil').then(res=>{
             this.setState({
-                mahasiswa: res.data.values 
+                barang: res.data.values 
             })
         })
     }
 
-    Deletemahasiswa = (idmahasiswa) => {
-        const {mahasiswa} = this.state
+    Deletebarang = (idbarang) => {
+        const {barang} = this.state
         const data = qs.stringify({
-            id_mahasiswa: idmahasiswa
+            id_barang: idbarang
         })
 
         axios.delete(api+ '/hapus',
@@ -40,17 +40,17 @@ class ListComp extends PureComponent {
                 console.log(json.data.status);
                 this.setState({
                     response: json.data.values,
-                    mahasiswa: mahasiswa.filter(mahasiswa => mahasiswa.id_mahasiswa !== idmahasiswa),
+                    barang: barang.filter(barang => barang.id_barang !== idbarang),
                     display: 'block'
                 })
-                this.props.history.push('/mahasiswa')
+                this.props.history.push('/barang')
             }else {
                 this.setState({
                     response: json.data.values,
-                    mahasiswa: mahasiswa.filter(mahasiswa => mahasiswa.id_mahasiswa !== idmahasiswa),
+                    barang: barang.filter(barang => barang.id_barang !== idbarang),
                     display: 'block'
                 })
-                //this.props.history.push('/mahasiswa')
+                //this.props.history.push('/barang')
             }
         });
 }
@@ -58,37 +58,39 @@ class ListComp extends PureComponent {
     render () {
         return (
             <Container>
-                <h2>Data Mahasiswa</h2>
+                <h2>Data Barang</h2>
                 <Alert color= "success" style={{display: this.state.display}}>
                         {this.state.response}
                     </Alert>
-                <NavLink href="/mahasiswa/tambah"><button color="success">Tambah Data</button></NavLink>
+                <NavLink href="/barang/tambah"><button color="success">Tambah Data</button></NavLink>
                 <hr/>
                 <Table className="table-bordered">
                     <thead>
                         <tr>
-                            <th>NIM</th>
-                            <th>Nama</th>
-                            <th>Jurusan</th>
+                            <th>ID Barang</th>
+                            <th>Nama Barang</th>
+                            <th>Harga</th>
+                            <th>Stok</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {this.state.mahasiswa.map(mahasiswa =>
-                            <tr key={mahasiswa.id_mahasiswa}>
-                                <td>{mahasiswa.nim}</td>
-                                <td>{mahasiswa.nama}</td>
-                                <td>{mahasiswa.jurusan}</td>
+                        {this.state.barang.map(barang =>
+                            <tr key={barang.id_barang}>
+                                <td>{barang.id_barang}</td>
+                                <td>{barang.nama_barang}</td>
+                                <td>{barang.harga}</td>
+                                <td>{barang.stok}</td>
                                 <td>
                                     <Link to= 
                                     {
                                         {
-                                            pathname: '/mahasiswa/edit',
+                                            pathname: '/barang/edit',
                                             state: {
-                                                id_mahasiswa: mahasiswa.id_mahasiswa,
-                                                nim: mahasiswa.nim,
-                                                nama: mahasiswa.nama,
-                                                jurusan: mahasiswa.jurusan
+                                                id_barang: barang.id_barang,
+                                                nama_barang: barang.nama_barang,
+                                                harga: barang.harga,
+                                                stok: barang.stok
                                             }
                                         }
                                     }>
@@ -96,7 +98,7 @@ class ListComp extends PureComponent {
                                         
                                     </Link>
                                     <span></span>
-                                        <Button onClick={()=>this.Deletemahasiswa(mahasiswa.id_mahasiswa)} color="danger">Hapus</Button>
+                                        <Button onClick={()=>this.Deletebarang(barang.id_barang)} color="danger">Hapus</Button>
 
 
                                 </td>

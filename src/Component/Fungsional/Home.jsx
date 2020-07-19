@@ -5,30 +5,15 @@ import Produk from '../Class/Produk'
 
 const Home = () => {
     return <div>
-        
-        <Produk nama="Mackbook Pro 2020" stock="10" harga="33000000"/>
-        <Produk nama="Mackbook Pro 2019" stock="15" harga="53000000"/>
-        <Produk nama="Mackbook Pro 2021" stock="14" harga="63000000"/>
-        <Produk nama="Mackbook Pro 2022" stock="50" harga="37000000"/>
-        <Produk nama="Mackbook Pro 2023" stock="100" harga="39000000"/>
-        <Produk nama="Mackbook Pro 2024" stock="108" harga="342000000"/>
-        
+        <Produk nama="Vivo X50 Pro" stock="10" harga="9999000"/>
+        <Produk nama="Vivo Y12i" stock="15" harga="1899000"/>
+        <Produk nama="Vivo Y30i" stock="14" harga="2499000"/>
+        <Produk nama="Oppo A91" stock="50" harga="3599000"/>
+        <Produk nama="Oppo RENO 2" stock="100" harga="6721250"/>
+        <Produk nama="Oppo A52" stock="108" harga="3100000"/>
+        <Produk nama="Samsung Galaxy A21s" stock="108" harga="3399000"/>
+        <Produk nama="Samsung Galaxy S20+" stock="10" harga="15749000"/>
         </div>
-        //<Blog/ 
-        //tanggal="02 Juni 2020"
-        //judul="Teknologi Blockchain"
-        //summary="Generate Lorem Ipsum placeholder text for use in your graphic"
-        //>
-        //<Blog/ 
-        //tanggal="03 Juni 2020"
-        //judul="Teknologi Internet of Things"
-        //summary="Generate Lorem Ipsum placeholder text for use in your graphic"
-        ///>
-        //<Blog/
-        //tanggal="04 Juni 2020"
-        //judul="Design Pattern Laravel"
-        //summary="Generate Lorem Ipsum placeholder text for use in your graphic"
-        
 }
 
 export default Home;

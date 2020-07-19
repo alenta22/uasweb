@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { Jumbotron, Button } from 'reactstrap';
 import { CartContext } from '../../CartContex';
 //import CardComp from './CardComp';
+import './css/HomePage.css'
 
 
 function HomePage() {
@@ -9,13 +10,10 @@ function HomePage() {
     return (
         <div>
       <Jumbotron>
-        <h1 className="display-3">HomePage</h1>
-        <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
-        <hr className="my-2" />
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <p className="lead">
-          <Button color="primary">Learn More</Button>
-        </p>
+        <h1 className="display-3">Loka Phone Cell</h1>
+        <img className="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT6K16SLnWg5HnuAzOhc_D1T914IvYv7_xlMw&usqp=CAU" alt=""></img>
+      
+      
       </Jumbotron>
     </div>
     )
